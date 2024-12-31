@@ -16,7 +16,7 @@ set firewall ipv4 forward filter rule 20 inbound-interface name 'eth1'
 set firewall ipv4 forward filter rule 20 outbound-interface name 'eth0'
  
 set firewall ipv4 forward filter rule 30 action 'drop'
-set firewall ipv4 forward filter rule 30 description 'Block 10.0.0.0/8 from Interface outbound eth0'
+set firewall ipv4 forward filter rule 30 description 'Block 10.0.0.0/8 from Interface outbound except eth0'
 set firewall ipv4 forward filter rule 30 source address '10.0.0.0/28'
 set firewall ipv4 forward filter rule 30 destination address '10.0.0.0/8'  
 set firewall ipv4 forward filter rule 30 protocol 'all'
