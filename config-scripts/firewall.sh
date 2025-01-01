@@ -1,4 +1,12 @@
 # firewall.sh
+configure
+set firewall ipv4 forward filter rule 2 action 'accept'
+set firewall ipv4 forward filter rule 2 description 'Allow RDP from 10.0.0.0/28 to 192.168.0.0/24'
+set firewall ipv4 forward filter rule 2 source address '10.0.0.0/28'
+set firewall ipv4 forward filter rule 2 destination address '192.168.0.0/24'
+set firewall ipv4 forward filter rule 2 destination port '3389'
+set firewall ipv4 forward filter rule 2 protocol 'tcp'
+
 set firewall ipv4 forward filter rule 10 action 'drop'
 set firewall ipv4 forward filter rule 10 description 'Block Private IPs from Interface'
 set firewall ipv4 forward filter rule 10 source address '10.0.0.0/28'
